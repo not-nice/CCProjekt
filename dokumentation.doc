@@ -1,0 +1,119 @@
+Projektübersicht
+
+Unser Projekt zielt darauf ab, eine moderne Webanwendung zu entwickeln, die auf einer Microservices-Architektur basiert. Das System umfasst eine Frontend-Web-App, einen Backend-API-Service und einen Datenbankservice.
+
+Architektur
+Frontend (Web App)
+
+Die Frontend-Komponente wurde mit React erstellt. Hier ist die Verzeichnisstruktur:
+
+java
+
+web-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   └── ...
+│   ├── styles/
+│   │   └── ...
+│   └── App.js
+└── package.json
+
+Backend (API-Service)
+
+Der Backend-API-Service wurde mit Node.js und Express.js entwickelt. Die Verzeichnisstruktur sieht wie folgt aus:
+
+go
+
+api-service/
+├── routes/
+│   └── ...
+├── controllers/
+│   └── ...
+├── server.js
+└── package.json
+
+Datenbank
+
+Der Datenbankservice verwendet AWS RDS als relationalen Datenbankdienst. Das Datenbankschema ist derzeit Database-1
+Installationsanleitung
+Voraussetzungen
+
+    Node.js
+    npm
+
+Frontend-Einrichtung
+
+    Repository klonen:
+
+    bash
+
+git clone https://github.com/not-nice/CloudComputing
+cd web-app
+
+Abhängigkeiten installieren:
+
+bash
+
+npm install
+
+Entwicklungsserver starten:
+
+bash
+
+    npm start
+
+Backend-Einrichtung
+
+    Ins Verzeichnis des API-Dienstes wechseln:
+
+    bash
+
+cd api-service
+
+Abhängigkeiten installieren:
+
+bash
+
+npm install
+
+Backend-Server starten:
+
+bash
+
+    npm start
+
+Datenbank-Einrichtung
+
+    Datenbank: AWS RDS
+    Verbindung: Siehe db.js-Datei im api-service-Verzeichnis.
+
+Testverfahren
+Ausführen von Unittests
+
+bash
+
+npm test
+
+Ausführen von Integrationstests
+
+bash
+
+npm test
+
+CI/CD-Pipeline-Details
+CI-Konfiguration
+
+Die CI-Konfigurationsdatei für GitHub Actions finden Sie in .github/workflows/main.yml.
+
+yaml
+
+# CI-Konfigurationsdetails hier
+
+CD-Konfiguration
+
+meine kontinuierliche Bereitstellung erfolgt automatisch nach einem erfolgreichen Build und Test. Aktualisierungen werden automatisch auf die Produktionsumgebung übertragen.
+Fazit
+
+meine Projekt demonstriert erfolgreich den Einsatz von Microservices und die Integration verschiedener AWS-Dienste. Bei weiteren Fragen stehen wir gerne zur Verfügung.
