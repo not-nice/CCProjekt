@@ -1,10 +1,8 @@
-// web-app/app.js
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const getDataBtn = document.getElementById('getDataBtn');
     const apiResponseDiv = document.getElementById('apiResponse');
 
-    getDataBtn.addEventListener('click', async function () {
+    getDataBtn.addEventListener('click', async () => {
         try {
             const response = await fetch('http://localhost:3000/api/data');
             const data = await response.json();
