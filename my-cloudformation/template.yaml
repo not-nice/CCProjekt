@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: s3bucket-92
+      AccessControl: Private
+
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0c7217cdde317cfec
+      InstanceType: t2.micro
+      Tags:
+        - Key: Name
+          Value: ec2-2
+
+  
+  MySNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: MyTopic
